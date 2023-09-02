@@ -1,0 +1,146 @@
+nav {
+  height: 5rem;
+  width: 100vw;
+  background: var(--color-primary);
+  display: grid;
+  place-items: center;
+  position: fixed;
+  top: 0;
+  background: #0b10f8;
+  left: 0;
+  z-index: 99;
+}
+
+.nav__toggle-btn {
+  display: none;
+}
+
+.nav_container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.logo {
+  width: 7rem;
+  margin-left: -9rem;
+}
+.nav_links {
+    gap: 3.5rem;
+    display: flex;
+    margin-left: 10rem;
+  
+    a {
+      position: relative; /* Important for positioning pseudo-element */
+      color: white;
+      .active{
+        color: yellow;
+      }
+  
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -2px; /* Adjust as needed to position the underline */
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: yellow;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform 0.3s ease-in-out, width 0.3s ease-in-out;
+      }
+  
+      &:hover::before,
+      &.active::before {
+        transform: scaleX(1);
+        width: 100%;
+      }
+  
+      &.active {
+        color: yellow; /* Change the active link color to yellow */
+      }  
+    }
+  }
+
+  @media screen and (max-width : 1024px) {
+    .logo {
+      width: 7rem;
+      margin-left: 3rem;
+      display: block;
+      width: 179px;
+  }
+  .nav__toggle-btn {
+    display: inline-block;
+    background-color: transparent;
+    font-size: 3rem;
+    cursor: pointer;
+    position: relative;
+    left: -6rem;
+
+      svg{
+        color: aliceblue;
+        
+      }
+
+    }
+    .nav_links{
+      position: absolute;
+      top: 100%;
+      right: 0;
+      flex-direction: column;
+      gap: 0;
+       li{
+        height: 4rem;
+        width: 100%;
+        box-shadow: -2rem 2rem 5rem rgba(0, 0, 0, 0.4);
+       }
+        a{
+           background-color: navy;
+           height: 100%;
+           text-align: center;
+           width: 100%;
+           padding: 1rem 5rem 1rem 3rem;
+          //  display: flex;
+        }
+       
+       
+    }
+     .show_nav{
+    display: flex;
+    }
+    .hide_nav{
+      display: none;
+    }
+    nav {
+      height: 5rem;
+      width: 107vw;
+      background: var(--color-primary);
+      display: grid;
+      place-items: center;
+      position: fixed;
+      top: 0;
+      background: #0b10f8;
+      left: 0;
+      z-index: 99;
+  }
+  }
+  @media screen and (max-width : 600px){
+    .nav__toggle-btn {
+      display: inline-block;
+      background-color: transparent;
+      font-size: 3rem;
+      cursor: pointer;
+      position: relative;
+      left: -2rem !important;
+    }
+    .logo {
+      width: 7rem;
+      margin-left: 10px !important;
+      display: block;
+      width: 179px;
+  }
+  }
+
+
+
