@@ -30,6 +30,7 @@ code {
 body{
   background: navy;
   color: white;
+  /* background: url('./images/bg_texture.png'); */
 }
 .btn{
   color:var(--color-gray-100);

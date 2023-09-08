@@ -6,6 +6,9 @@ import About from './pages/About/About';
 import Contact from './pages/Contact/Contact'
 import Gallery from './pages/Gallery/Gallery';
 import Footer from './components/Footer';
+import Notfound from './pages/Notfound/Notfound';
+import Plans from './pages/Plans/Plans';
+import Trainers from './pages/Trainers/Trainers';
 
 
 
@@ -19,9 +22,9 @@ function App() {
       <Route exact path="/about" Component={About} />
       <Route exact path="/Gallery" Component={Gallery} />
       <Route exact path="/Contacts" Component={Contact} />
-      {/* <Route exact path="/plans" Component={Plans} /> */}
-      {/* <Route exact path="/Trainers" Component={Trainers} /> */}
-      {/* <Route exact path="*" Component={NotFound} /> */}
+      <Route exact path="/plans" Component={Plans} />
+      <Route exact path="/Trainers" Component={Trainers} />
+      <Route exact path="*" Component={Notfound} />
       </Routes>  
       <Footer/>
       </BrowserRouter>

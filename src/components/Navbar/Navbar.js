@@ -22,12 +22,12 @@ function Navbar() {
         
                 <ul className={`nav_links ${isNavShowing ? 'show_nav' : 'hide_nav'}`}>
 
-                <NavLink to="/">HOME</NavLink>
-                <NavLink to="/About">ABOUT US</NavLink>
-                <NavLink to="/Gallery">GALLERY</NavLink>
-                <NavLink to="/Plans">PLANS</NavLink>
-                <NavLink to="/Trainers">TRAINERS</NavLink>
-                <NavLink to="/Contacts">CONTACT</NavLink>
+                <NavLink to="/"  onClick={()=>setIsNavShowing(false)}>HOME</NavLink>
+                <NavLink to="/About"  onClick={()=>setIsNavShowing(false)}>ABOUT US</NavLink>
+                <NavLink to="/Gallery"  onClick={()=>setIsNavShowing(false)}>GALLERY</NavLink>
+                <NavLink to="/Plans"  onClick={()=>setIsNavShowing(false)}>PLANS</NavLink>
+                <NavLink to="/Trainers"  onClick={()=>setIsNavShowing(false)}>TRAINERS</NavLink>
+                <NavLink to="/Contacts"  onClick={()=>setIsNavShowing(false)}>CONTACT</NavLink>
                 </ul>
                 <button className='nav__toggle-btn' onClick={()=>setIsNavShowing(!isNavShowing)}>
                   
